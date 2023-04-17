@@ -1,0 +1,57 @@
+body {
+    font-family:'Segoe Script';
+    font-size: 2em;
+    text-align: center;
+    background-color: #b0c5e1ff;
+}
+
+img {
+    width: 500px;
+    padding: 25px;
+}
+
+label {
+    margin: 25px 5px;
+}
+
+#remove_items {
+    background-color:aliceblue;
+    color: #30150f;
+    padding: 25px;
+}
+
+#add_btn {
+    background-color: darkolivegreen;
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 2px solid white;
+    margin: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+#remove_btn {
+    background-color: lightgray;
+    color: black;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 2px solid white;
+    margin: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+select {
+    font-family: 'Segoe Script';
+    font-size: 1em;
+    text-align: center;
+    width: 300px;
+    margin: 50px 10px;
+    padding: 5px 0;
+    border: 2px solid darkgray;
+}
+
+#add_btn:hover {
+    background-color: darkgreen;
+}

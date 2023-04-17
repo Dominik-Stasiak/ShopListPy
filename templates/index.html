@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Furniture shop list APP</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}" />
+    <script type="text/javascript" src="{{ url_for('static', filename='js/main.js')}}" ></script>
+</head>
+<body>
+    <div>
+        <img src="https://cdn.pixabay.com/photo/2016/11/22/08/53/training-1848689_960_720.jpg" alt="app logo" />
+    </div>
+    <div id="remove_items">
+        <form action="/remove_items" method="POST">
+            {% for item in furniture_items%}
+            <input type="checkbox" name="check" id="{{item}}" value="{{item}}" onchange="check_me('{{item}}')"/>
+            <label for="{{items}}" name="{{item}}">{{item}}</label><br />
+            {% endfor %}
+            <input type="submit" value="CHECK ITEMS" id="remove_btn"/>
+        </form>
+    </div>
+
+    <div id="add_item">
+        <form action="/add_items" method="POST">
+            <select name="select_items">
+                {% for item in all_items %}
+                <option value="{{ item }}">{{ item }}</option>
+                {% endfor %}
+                <input type="submit" value="ADD ITEM" id="add_btn"/>
+            </select>
+        </form>
+    </div>
+</body>
+</html>
